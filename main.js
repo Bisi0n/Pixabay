@@ -1,7 +1,7 @@
 let form = document.querySelector('form');
 let input = document.querySelector('#input')
 let color = document.querySelector('#select-color')
-let image = document.querySelector('#photo')
+let photoSection = document.querySelector('#photo')
 
 //form on submit, eventprevent default.
 
@@ -13,13 +13,20 @@ form.onsubmit = async event => {
     let jsonRespons = await respons.json();
 
     let result = jsonRespons.hits[0].previewURL;
-    //let result = jsonRespons.hits;
-    //img = src
+    
 
-    photo = new image
-    image = result;
+    let img = document.createElement('img');
+    img.src = result;
+    photoSection.appendChild(img);
 
-    //document.createelement(img);
+    
+    //all pictures
+    // for (let i = 0; i < jsonRespons.hits.length; i++) {
+    //     let hit = jsonRespons.hits[i];
+    //     let img = document.createElement('img');
+    //     img.src = hit.previewURL;
+    //     photoSection.appendChild(img);
+    //   }
 
 }
 
