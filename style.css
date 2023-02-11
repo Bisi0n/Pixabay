@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -38,6 +38,21 @@ button {
     height: 50px;
     font-size: 30px;
     margin: 10px;
+}
+
+#photo {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#photo img {
+    width: 30%;
+    height: auto;
+    margin: 20px;
 }
 
 /* @media (max-width: 600px) {

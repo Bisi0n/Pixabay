@@ -12,25 +12,26 @@ form.onsubmit = async event => {
 
     let jsonRespons = await respons.json();
 
-    let result = jsonRespons.hits[0].previewURL;
+    //let result = jsonRespons.hits[0].previewURL;
+    //LargeImageUrl = HD
     
 
-    let img = document.createElement('img');
-    img.src = result;
-    photoSection.appendChild(img);
+    // let img = document.createElement('img');
+    // img.src = result;
+    // photoSection.appendChild(img);
 
     
     //all pictures
-    // for (let i = 0; i < jsonRespons.hits.length; i++) {
-    //     let hit = jsonRespons.hits[i];
-    //     let img = document.createElement('img');
-    //     img.src = hit.previewURL;
-    //     photoSection.appendChild(img);
-    //   }
+    jsonRespons.hits.forEach(hit => {
+      let img = document.createElement('img');
+      img.src = hit.LargeImageUrl;
+      photoSection.appendChild(img);
+    }
+    );
 
 }
 
-let apiKey = 'https://pixabay.com/api/?key=33504400-b87edb6ce041e4f4c84fb55a2'
+//let apiKey = 'https://pixabay.com/api/?key=33504400-b87edb6ce041e4f4c84fb55a2'
 
 // async function searchPhoto(){
     
