@@ -42,7 +42,7 @@ button {
 
 #photo {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -53,6 +53,21 @@ button {
     width: 30%;
     height: auto;
     margin: 20px;
+}
+
+#prev, #next {
+    display: flex;
+    align-content: center;
+    position: fixed;
+    bottom: 0;
+}
+
+#prev {
+    left: 40%;
+}
+
+#next {
+    right: 40%;
 }
 
 /* @media (max-width: 600px) {

@@ -11,10 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
 </head>
-    <h1>Pixaby Image Search</h1>
+<h1>Pixaby Image Search</h1>
+
 <body>
     <form>
-        <input type="text" id="input" name="animal" placeholder="Search for photos" required >
+        <input type="text" id="input" name="animal" placeholder="Search for photos" required>
         <select name="color" id="select-color" form="color">
             <option id="op">any color</option>
             <option id="grayscale">grayscale</option>
@@ -32,11 +33,13 @@
             <option id="brown">brown</option>
 
         </select>
-        <button type="Submit">Submit</button>
+        <button type="Submit" id="submit">Submit</button>
     </form>
     <section id="photo">
-        
     </section>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+
 </body>
 
 </html>
