@@ -18,6 +18,13 @@ body {
     font-family: 'Oleo Script', cursive;
 }
 
+.content-wrapper {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
 form {
     display: flex;
     align-content: center;
@@ -41,21 +48,20 @@ button {
 }
 
 #photo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    float: left;
+    width: 25%;
+    margin: 0%;
+    overflow: hidden;
 }
 
 #photo img {
-    width: 30%;
-    height: auto;
+    width: 100%;
+    display: block;
     margin: 20px;
 }
 
-#prev, #next {
+#prev,
+#next {
     display: flex;
     align-content: center;
     position: fixed;
@@ -77,7 +83,7 @@ button {
     }
 } */
 
-@media (max-width: 640px) {
+@media (max-width: 650px) {
 
     form,
     h1 {
@@ -92,4 +98,22 @@ button {
         width: 100%;
         margin: 10px 0;
     }
+
+    #photo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #prev {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #next {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
