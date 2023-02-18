@@ -18,13 +18,6 @@ body {
     font-family: 'Oleo Script', cursive;
 }
 
-.content-wrapper {
-    display: flex;
-    align-content: center;
-    width: 100%;
-    overflow: hidden;
-}
-
 form {
     display: flex;
     align-content: center;
@@ -47,16 +40,33 @@ button {
     margin: 10px;
 }
 
-#photo {
-    float: left;
+/* #photo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     width: 25%;
     margin: 0%;
-    overflow: hidden;
 }
 
 #photo img {
     width: 100%;
-    display: block;
+    margin: 20px;
+} */
+
+#photo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#photo img {
+    width: 30%;
+    height: auto;
     margin: 20px;
 }
 

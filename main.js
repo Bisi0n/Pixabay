@@ -21,27 +21,60 @@ form.onsubmit = async event => {
   displayImage(search);
 }
 
+// async function displayImage(search){
+//   let respons = await fetch(apiKey + search + '&page=' + counter + '&per_page=10&image_type=photo');
+//   let jsonRespons = await respons.json();
+
+//   photoSection.textContent = ''; //clear images when searching again
+//   jsonRespons.hits.forEach(hit => {
+//       let img = document.createElement('img');
+//       img.src = hit.webformatURL;
+//       photoSection.appendChild(img);
+      
+//       // Create tags element
+//       let tags = document.createElement('p');
+//       tags.textContent = hit.tags;
+//       photoSection.appendChild(tags);
+      
+//       // Create photographer element
+//       let photographer = document.createElement('p');
+//       photographer.textContent = ' Taken by:' + hit.user;
+//       photoSection.appendChild(photographer);
+//     });
+// };
+
 async function displayImage(search){
   let respons = await fetch(apiKey + search + '&page=' + counter + '&per_page=10&image_type=photo');
   let jsonRespons = await respons.json();
 
   photoSection.textContent = ''; //clear images when searching again
   jsonRespons.hits.forEach(hit => {
-      let img = document.createElement('img');
-      img.src = hit.webformatURL;
-      photoSection.appendChild(img);
+   
+    // Create container element for each image
+    let container = document.createElement('div');
+    
+    // Create image element and append to container
+    let img = document.createElement('img');
+    img.src = hit.webformatURL;
+    container.appendChild(img);
       
-      // Create tags element
-      let tags = document.createElement('p');
-      tags.textContent = hit.tags;
-      photoSection.appendChild(tags);
+    // Create tags element and append to container
+    let tags = document.createElement('p');
+    tags.textContent = hit.tags;
+    container.appendChild(tags);
       
-      // Create photographer element
-      let photographer = document.createElement('p');
-      photographer.textContent = ' Taken by:' + hit.user;
-      photoSection.appendChild(photographer);
-    });
+    // Create photographer element and append to container
+    let photographer = document.createElement('p');
+    photographer.textContent = 'Taken by: ' + hit.user;
+    container.appendChild(photographer);
+    
+    // Append container to photoSection
+    photoSection.appendChild(container);
+  });
 };
+
+
+
 
 // Previous button
 previous.onclick = event => {
