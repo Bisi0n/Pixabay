@@ -61,11 +61,15 @@ async function displayImage(search){
     // Create tags element and append to container
     let tags = document.createElement('p');
     tags.textContent = hit.tags;
+    tags.style.color = 'white'; //To change text-color
+    tags.style.fontSize = '25px';
     container.appendChild(tags);
       
     // Create photographer element and append to container
     let photographer = document.createElement('p');
     photographer.textContent = 'Taken by: ' + hit.user;
+    photographer.style.color = 'white';
+    photographer.style.fontSize = '25px';
     container.appendChild(photographer);
     
     // Append container to photoSection

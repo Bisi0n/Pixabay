@@ -55,7 +55,7 @@ button {
     margin: 20px;
 } */
 
-#photo {
+/* #photo {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -68,7 +68,30 @@ button {
     width: 30%;
     height: auto;
     margin: 20px;
+} */
+
+#photo {
+    /* display: grid;
+    grid-template: 
+    'a b'
+    'c d'
+    ; */
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
+
+#photo img {
+    margin-top: 10%;
+
+    width: 50%;
+
+}
+
 
 #prev,
 #next {
