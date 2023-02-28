@@ -15,7 +15,7 @@ let search;
 
 form.onsubmit = async event => {
   event.preventDefault();
-  search = '&q=' + color.value + '+' + input.value;
+  search = '&q=' + input.value + '&colors=' + color.value; //Sökningen efter färg görs på fel sätt
   displayImage(search);
 }
 
@@ -51,6 +51,22 @@ async function displayImage(search) {
 
     // Append container to photoSection
     photoSection.appendChild(container);
+
+    //Divide images on pages
+    let perPage = 10;
+    let totalHits = jsonRespons.totalHits;
+    pagesTotal = Math.ceil(totalHits / perPage) //Math.round
+
+
+    // First page
+    if (counter === 1) {
+      previous.disabled = true;
+    }
+
+    // Last page
+    if (counter === pagesTotal) {
+      next.disabled = true;
+    }
   });
 };
 
@@ -59,14 +75,28 @@ async function displayImage(search) {
 
 // Previous button
 previous.onclick = event => {
-  counter--;
-  displayImage(search);
+  if (counter > 1) {
+    counter--;
+    displayImage(search);
+
+    next.disabled = false;
+  }
+  if (counter === 1) {
+    previous.disabled = true; //first page
+  }
 }
 
 // Next button
 next.onclick = event => {
-  counter++;
-  displayImage(search);
+  if (counter < pagesTotal) {
+    counter++;
+    displayImage(search);
+
+    previous.disabled = false;
+  }
+  if (counter === pagesTotal) {
+    next.disabled = true;
+  }
 }
 
 
