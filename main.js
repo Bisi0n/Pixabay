@@ -5,6 +5,7 @@ let photoSection = document.querySelector('#photo')
 let button = document.querySelector('#submit')
 let previous = document.querySelector('#prev')
 let next = document.querySelector('#next')
+let buttonContainer = document.querySelector('#buttonContainer')
 let apiKey = 'https://pixabay.com/api/?key=33504400-b87edb6ce041e4f4c84fb55a2'
 let counter = 1; //page 
 
@@ -17,6 +18,7 @@ form.onsubmit = async event => {
   event.preventDefault();
   search = '&q=' + input.value + '&colors=' + color.value; //Sökningen efter färg görs på fel sätt
   displayImage(search);
+  buttonContainer.style.display = 'grid';
 }
 
 
@@ -30,6 +32,7 @@ async function displayImage(search) {
 
     // Create container element for each image
     let container = document.createElement('div');
+    container.classList.add('main')
 
     let img = document.createElement('img');
     img.src = hit.webformatURL;

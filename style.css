@@ -66,21 +66,44 @@ button {
         'a b';
 
     place-content: center;
+    display: none;
 }
 
 .imageTags {
     font-size: 20px;
     text-align: center;
 }
+
 .photographerCss {
     color: white;
     font-size: 20px;
     text-align: center;
 }
 
+@media (max-width: 1000px) {
+    #photo {
+
+        display: grid;
+        grid-template:
+            'a b c'
+        ;
+
+    }
+}
+
+@media (max-width: 700px) {
+    #photo {
+
+        display: grid;
+        grid-template:
+            'a b'
+        ;
+
+    }
+}
 
 
-@media (max-width: 650px) {
+@media (max-width: 630px) {
 
     form,
     h1 {
