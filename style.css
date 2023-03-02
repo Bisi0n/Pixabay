@@ -69,16 +69,12 @@ button {
     display: none;
 }
 
-.imageTags {
+.imageTags, .photographerCss {
     font-size: 20px;
+    color: white;
     text-align: center;
 }
 
-.photographerCss {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
 
 @media (max-width: 1000px) {
     #photo {

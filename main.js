@@ -40,17 +40,11 @@ async function displayImage(search) {
 
     let tags = document.createElement('p');
     tags.textContent = hit.tags;
-    tags.style.color = 'white'; //To change text-color
-    // tags.style.fontSize = '20px';
-    // tags.style.textAlign = 'center'
     tags.classList.add('imageTags');
     container.appendChild(tags);
 
     let photographer = document.createElement('p');
     photographer.textContent = 'Taken by: ' + hit.user;
-    // photographer.style.color = 'white';
-    // photographer.style.fontSize = '20px';
-    // photographer.style.textAlign = 'center'
     photographer.classList.add('photographerCss');
     container.appendChild(photographer);
 
@@ -60,7 +54,7 @@ async function displayImage(search) {
     //Divide images on pages
     let perPage = 10;
     let totalHits = jsonRespons.totalHits;
-    pagesTotal = Math.ceil(totalHits / perPage) //Math.round
+    pagesTotal = Math.ceil(totalHits / perPage) 
 
 
     // First page
@@ -74,7 +68,6 @@ async function displayImage(search) {
     }
   });
 };
-
 
 
 
