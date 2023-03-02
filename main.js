@@ -54,7 +54,7 @@ async function displayImage(search) {
     //Divide images on pages
     let perPage = 10;
     let totalHits = jsonRespons.totalHits;
-    pagesTotal = Math.ceil(totalHits / perPage) 
+    pagesTotal = Math.ceil(totalHits / perPage)
 
 
     // First page

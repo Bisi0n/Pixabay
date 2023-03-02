@@ -69,7 +69,8 @@ button {
     display: none;
 }
 
-.imageTags, .photographerCss {
+.imageTags,
+.photographerCss {
     font-size: 20px;
     color: white;
     text-align: center;
@@ -87,7 +88,7 @@ button {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
     #photo {
 
         display: grid;
