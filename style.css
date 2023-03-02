@@ -68,6 +68,16 @@ button {
     place-content: center;
 }
 
+.imageTags {
+    font-size: 20px;
+    text-align: center;
+}
+.photographerCss {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
 
 
 @media (max-width: 650px) {
